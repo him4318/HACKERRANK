@@ -1,0 +1,21 @@
+#!/bin/python3
+
+import sys
+
+
+def howManyGames(p, d, m, s):
+   c = 0
+   while s>=p:
+       c = c+1
+       s = s-p
+       p = p-d
+       if p < m:
+           p = m
+
+
+   return c
+if __name__ == "__main__":
+    p, d, m, s = input().strip().split(' ')
+    p, d, m, s = [int(p), int(d), int(m), int(s)]
+    answer = howManyGames(p, d, m, s)
+    print(answer)
