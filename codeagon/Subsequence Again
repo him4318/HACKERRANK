@@ -1,0 +1,13 @@
+import sys
+from collections import Counter
+
+s = raw_input()
+k = int(raw_input())
+counter = Counter(s)
+
+ans = ""
+for c in s:
+    if counter[c]>=k:
+        ans = ans + c
+
+print ans
